@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Kein KI-Sprech">
+  <title>Kein KI-Sprech</title>
+  <rect width="512" height="512" rx="112" fill="#14181d"/>
+  <rect x="88" y="128" width="336" height="204" rx="48" fill="#f4f1ea"/>
+  <path d="M300 332h76v80z" fill="#f4f1ea"/>
+  <path d="M112.5 435.6 72.6 393.4 401.5 82.4 441.4 124.6z" fill="#14181d"/>
+  <path d="M109.3 422 86 397.3 404.7 96 428 120.7z" fill="#e2564d"/>
+</svg>

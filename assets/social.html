@@ -1,0 +1,58 @@
+<!doctype html>
+<!-- Quelle für assets/social.png (GitHub Social Preview, 1280x640).
+     Rendern: ./scripts/build-assets.sh -->
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1280px; height: 640px; }
+  body {
+    background: #14181d;
+    color: #f4f1ea;
+    font-family: "Avenir Next", "Helvetica Neue", system-ui, sans-serif;
+    padding: 78px 88px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+  }
+  .mark { position: absolute; top: 74px; right: 88px; width: 124px; height: 124px; }
+  h1 { font-size: 94px; font-weight: 700; letter-spacing: -2.5px; line-height: 1; }
+  .claim { font-size: 33px; font-weight: 500; color: #b8b2a6; margin-top: 20px; letter-spacing: -.2px; }
+  hr { border: 0; border-top: 1px solid #2b3138; margin: 46px 0 40px; width: 940px; }
+  .demo { font-size: 32px; line-height: 1.4; }
+  .demo div { display: flex; align-items: baseline; gap: 18px; }
+  .demo .marke { color: #e2564d; font-weight: 700; width: 26px; flex: none; }
+  .demo .vorher { color: #9a9488; text-decoration: line-through; text-decoration-color: #e2564d; text-decoration-thickness: 3px; }
+  .demo .nachher { margin-top: 16px; }
+  footer { margin-top: auto; display: flex; justify-content: space-between; align-items: baseline; }
+  footer span { font-size: 25px; color: #8b8579; letter-spacing: 1.4px; text-transform: uppercase; font-weight: 600; }
+  footer .repo { text-transform: none; letter-spacing: 0; font-weight: 500; }
+</style>
+</head>
+<body>
+  <svg class="mark" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+    <rect width="512" height="512" rx="112" fill="#1b2129"/>
+    <rect x="88" y="128" width="336" height="204" rx="48" fill="#f4f1ea"/>
+    <path d="M300 332h76v80z" fill="#f4f1ea"/>
+    <path d="M112.5 435.6 72.6 393.4 401.5 82.4 441.4 124.6z" fill="#1b2129"/>
+    <path d="M109.3 422 86 397.3 404.7 96 428 120.7z" fill="#e2564d"/>
+  </svg>
+
+  <h1>Kein KI-Sprech</h1>
+  <p class="claim">Deutsche Texte ohne KI-Muster. Die Handschrift bleibt.</p>
+
+  <hr>
+
+  <div class="demo">
+    <div><span class="marke">&times;</span><span class="vorher">&bdquo;Zur Sicherstellung der Einhaltung der Anforderungen&ldquo;</span></div>
+    <div class="nachher"><span class="marke">&check;</span><span>&bdquo;damit die Vorgaben eingehalten werden&ldquo;</span></div>
+  </div>
+
+  <footer>
+    <span>Skill &middot; Claude Code &middot; Cowork &middot; Codex CLI &middot; API</span>
+    <span class="repo">github.com/m-dohmen/kein-ki-sprech</span>
+  </footer>
+</body>
+</html>

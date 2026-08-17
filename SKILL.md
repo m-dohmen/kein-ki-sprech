@@ -1,6 +1,6 @@
 ---
 name: kein-ki-sprech
-description: Überarbeitet deutsche Texte so, dass sie nach einem Menschen klingen und nicht nach einem Sprachmodell — oder prüft einen Text nur und benennt die KI-Muster, ohne ihn umzuschreiben. Immer verwenden, wenn jemand einen deutschen Text schärfen, entfloskeln, direkter machen oder "weniger nach KI klingen" lassen will, wenn gefragt wird "klingt das nach ChatGPT?", und auch dann, wenn ohne das Wort "KI" um Überarbeitung von Blogbeiträgen, LinkedIn-Posts, Angeboten, Whitepapern, Mails oder Präsentationstexten gebeten wird.
+description: Entfloskelt deutsche Texte, damit sie nach Mensch statt nach KI klingen (klingt das nach ChatGPT?), oder prüft nur und benennt die Muster. Für Blogposts, LinkedIn, Angebote, Whitepaper, Mails.
 license: MIT
 ---
 
