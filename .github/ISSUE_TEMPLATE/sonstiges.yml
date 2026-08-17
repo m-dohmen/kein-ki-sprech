@@ -1,0 +1,10 @@
+name: Sonstiges
+description: Frage, Installationsproblem oder etwas, das in kein anderes Template passt
+labels: []
+body:
+  - type: textarea
+    id: beschreibung
+    attributes:
+      label: Beschreibung
+    validations:
+      required: true

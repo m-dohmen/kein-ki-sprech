@@ -152,6 +152,10 @@ Deutsche Eigenentwicklung, angeregt von [no-ai-slop](https://github.com/petergya
 
 Bewusst nicht übernommen: das Em-Dash-Verbot (der Halbgeviertstrich ist im Deutschen korrekt, geregelt wird nur das Maß), das Pauschalverbot von Adverbien und W-Satzanfängen (englischspezifisch) und der Satire-Modus von no-ai-slop. Wer den Skill erweitert, sollte diese Regeln nicht nachrüsten.
 
+## Mitmachen
+
+Neue Muster, Falsch-Positive oder Vorher/Nachher-Paare: siehe [CONTRIBUTING.md](CONTRIBUTING.md). Für dieses Projekt gilt ein [Verhaltenskodex](CODE_OF_CONDUCT.md). Sicherheitsrelevante Funde bitte gemäß [SECURITY.md](SECURITY.md) melden.
+
 ## Lizenz
 
 MIT

@@ -1,0 +1,26 @@
+name: Fehlendes KI-Muster
+description: Ein KI-Sprech-Muster melden, das SKILL.md noch nicht kennt
+labels: ["neues-muster"]
+body:
+  - type: textarea
+    id: vorher
+    attributes:
+      label: Vorher-Satz
+      description: Ein Beispielsatz, der das Muster zeigt (echt oder erfunden, aber realistisch)
+      placeholder: "Zur Sicherstellung der Einhaltung der Anforderungen erfolgt eine Prüfung."
+    validations:
+      required: true
+  - type: textarea
+    id: warum
+    attributes:
+      label: Warum ist das ein KI-Marker?
+      description: Warum schreiben Sprachmodelle so öfter als Menschen? Ein Muster, das gute menschliche Autoren genauso oft nutzen, gehört nicht in den Skill.
+    validations:
+      required: true
+  - type: textarea
+    id: vorschlag
+    attributes:
+      label: Vorschlag für die Regel (optional)
+      description: Wie könnte der Eintrag in SKILL.md aussehen?
+    validations:
+      required: false

@@ -1,0 +1,31 @@
+name: Falsch-Positiv / Verschlimmbesserung
+description: Der Skill hat einen guten Satz kaputtgemacht, eine Gattungsnorm ignoriert oder die Stimme überschrieben
+labels: ["falsch-positiv"]
+body:
+  - type: textarea
+    id: vorher
+    attributes:
+      label: Originaltext
+      description: Der Text, der dem Skill übergeben wurde
+    validations:
+      required: true
+  - type: textarea
+    id: ergebnis
+    attributes:
+      label: Was der Skill daraus gemacht hat
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Was daran falsch ist
+      description: Wurde eine Gattungsnorm verletzt, eine Stimme geglättet, ein Fakt erfunden, etwas anderes?
+    validations:
+      required: true
+  - type: input
+    id: umgebung
+    attributes:
+      label: Umgebung
+      description: Claude Code, Cowork/claude.ai, Codex CLI, API – und wenn bekannt, welches Modell
+    validations:
+      required: false
