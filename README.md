@@ -23,10 +23,10 @@ Das legt `dist/kein-ki-sprech.zip` an — ein Ordner `kein-ki-sprech/` mit `SKIL
 
 | Umgebung | Installation | Aufruf |
 | --- | --- | --- |
-| Claude Cowork / claude.ai | ZIP unter *Customize > Skills* hochladen, danach einschalten | „Entfloskle den Text …" |
+| Claude Cowork / claude.ai | ZIP unter *Customize > Skills* hochladen, danach einschalten | „Entferne den AI-Slop aus dem Text." |
 | Codex CLI | ZIP nach `~/.agents/skills/` entpacken | `$kein-ki-sprech <Text>` |
 | Claude Code | ZIP nach `~/.claude/skills/` entpacken | `/kein-ki-sprech <Text>` |
-| Claude Projects | `SKILL.md` ins Projektwissen | „Entfloskle den Text …" |
+| Claude Projects | `SKILL.md` ins Projektwissen | „Entferne den AI-Slop aus dem Text." |
 | API / eigene Anwendung | `SKILL.md` in den System-Prompt | — |
 
 ## Claude Cowork
@@ -40,7 +40,7 @@ Cowork und claude.ai teilen dieselbe Skill-Verwaltung. Einmal hochgeladen, gilt 
 
 Danach greift der Skill von selbst, sobald eine Anfrage passt:
 
-- „Mach den Absatz weniger nach KI klingend."
+- „Entferne den AI-Slop aus dem Absatz."
 - „Klingt der LinkedIn-Post nach ChatGPT? Nur prüfen, nicht umschreiben."
 - „Entfloskle den Angebotstext, aber lass die Vertragsformeln in Ruhe."
 

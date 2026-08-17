@@ -1,6 +1,6 @@
 ---
 name: kein-ki-sprech
-description: Entfloskelt deutsche Texte, damit sie nach Mensch statt nach KI klingen (klingt das nach ChatGPT?), oder prüft nur und benennt die Muster. Für Blogposts, LinkedIn, Angebote, Whitepaper, Mails.
+description: Entfernt AI-Slop aus deutschen Texten, entfloskelt sie, damit sie nach Mensch klingen — oder prüft nur und benennt die Muster (klingt das nach ChatGPT?). Für Blogposts, Angebote, Mails.
 license: MIT
 ---
 
