@@ -1,8 +1,10 @@
 <img src="assets/icon-256.png" alt="" width="92" align="right">
-
+<br />
 # Kein KI-Sprech
 
 Ein Skill, der deutsche Texte von KI-Mustern befreit, ohne die Handschrift der schreibenden Person zu überschreiben.
+
+<img src="assets/social.png" align="center">
 
 Die englischsprachigen Vorbilder ([no-ai-slop](https://github.com/petergyang/no-ai-slop), [stop-slop](https://github.com/hardikpandya/stop-slop)) jagen englische Marker: Em-Dashes, Wh-Satzanfänge, „delve", „leverage". Im Deutschen fehlen die entweder oder sie sind korrekt. Der Halbgeviertstrich etwa gehört hier zum sauberen Satz. Dieser Skill ist deshalb für das Deutsche neu geschrieben.
 
