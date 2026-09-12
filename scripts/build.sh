@@ -6,13 +6,14 @@ set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 NAME="kein-ki-sprech"
+SRC="$ROOT/skills/$NAME"
 STAGE="$(mktemp -d)"
 OUT="$ROOT/dist/$NAME.zip"
 SKILL="$ROOT/dist/$NAME.skill"
 
 mkdir -p "$STAGE/$NAME/references"
-cp "$ROOT/SKILL.md" "$STAGE/$NAME/"
-cp "$ROOT/references/beispiele.md" "$STAGE/$NAME/references/"
+cp "$SRC/SKILL.md" "$STAGE/$NAME/"
+cp "$SRC/references/beispiele.md" "$STAGE/$NAME/references/"
 
 mkdir -p "$ROOT/dist"
 rm -f "$OUT" "$SKILL"

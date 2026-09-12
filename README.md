@@ -11,7 +11,15 @@ Die englischsprachigen Vorbilder ([no-ai-slop](https://github.com/petergyang/no-
 
 ## Schnellstart
 
-Einmal klonen und das Paket bauen, danach die passende Umgebung wählen:
+In jedem Agenten mit Kommandozeile – Claude Code, Codex, Cursor, Windsurf, Gemini, opencode, Zed und viele weitere – genügt ein Befehl:
+
+```bash
+npx skills add m-dohmen/kein-ki-sprech
+```
+
+Das legt den Skill im aktuellen Projekt ab. `-g` installiert ihn global für alle Projekte, `npx skills update` holt spätere Fassungen nach.
+
+Claude Cowork, claude.ai und Claude Projects kennen die CLI nicht. Dort führt der Weg über ein ZIP, das aus dem Repository gebaut wird:
 
 ```bash
 git clone https://github.com/m-dohmen/kein-ki-sprech.git
@@ -19,15 +27,33 @@ cd kein-ki-sprech
 ./scripts/build.sh
 ```
 
-Das legt `dist/kein-ki-sprech.zip` an – ein Ordner `kein-ki-sprech/` mit `SKILL.md` und `references/beispiele.md`. Dieses ZIP ist die Installationsdatei für alle folgenden Wege.
+Das legt `dist/kein-ki-sprech.zip` an – ein Ordner `kein-ki-sprech/` mit `SKILL.md` und `references/beispiele.md`.
 
 | Umgebung | Installation | Aufruf |
 | --- | --- | --- |
+| Claude Code | `npx skills add m-dohmen/kein-ki-sprech` | `/kein-ki-sprech <Text>` |
+| Codex CLI | `npx skills add m-dohmen/kein-ki-sprech` | `$kein-ki-sprech <Text>` |
+| Cursor, Windsurf, Gemini, Zed u. a. | `npx skills add m-dohmen/kein-ki-sprech` | „Entferne den AI-Slop aus dem Text.“ |
 | Claude Cowork / claude.ai | ZIP unter *Customize > Skills* hochladen, danach einschalten | „Entferne den AI-Slop aus dem Text.“ |
-| Codex CLI | ZIP nach `~/.agents/skills/` entpacken | `$kein-ki-sprech <Text>` |
-| Claude Code | ZIP nach `~/.claude/skills/` entpacken | `/kein-ki-sprech <Text>` |
 | Claude Projects | `SKILL.md` ins Projektwissen | „Entferne den AI-Slop aus dem Text.“ |
 | API / eigene Anwendung | `SKILL.md` in den System-Prompt | – |
+
+## Installation per CLI
+
+Die [skills-CLI](https://skills.sh) erkennt den laufenden Agenten selbst und installiert an die passende Stelle – `.claude/skills/` bei Claude Code, `.agents/skills/` bei Codex und so weiter.
+
+```bash
+# ins aktuelle Projekt
+npx skills add m-dohmen/kein-ki-sprech
+
+# global für alle Projekte
+npx skills add -g m-dohmen/kein-ki-sprech
+
+# ohne Rückfragen, etwa in einem Setup-Skript
+npx skills add m-dohmen/kein-ki-sprech -g -y
+```
+
+`npx skills list` zeigt, was installiert ist, `npx skills update` holt neue Fassungen, `npx skills remove kein-ki-sprech` entfernt den Skill wieder. Wer lieber ohne CLI arbeitet, nimmt den ZIP-Weg aus den folgenden Abschnitten – das Ergebnis ist dasselbe.
 
 ## Claude Cowork
 
@@ -48,7 +74,7 @@ Enthält das ZIP die Dateien flach statt im Ordner `kein-ki-sprech/`, lehnt Clau
 
 ## Codex CLI
 
-Codex liest Skills aus `.agents/skills`. Global für alle Repositories:
+`npx skills add m-dohmen/kein-ki-sprech` erledigt das Folgende automatisch. Von Hand geht es so: Codex liest Skills aus `.agents/skills`. Global für alle Repositories:
 
 ```bash
 mkdir -p ~/.agents/skills && unzip -o dist/kein-ki-sprech.zip -d ~/.agents/skills/
@@ -72,6 +98,8 @@ $kein-ki-sprech Bitte den folgenden Absatz überarbeiten: …
 
 ## Claude Code
 
+Auch hier ist `npx skills add m-dohmen/kein-ki-sprech` der kürzeste Weg. Von Hand:
+
 ```bash
 mkdir -p ~/.claude/skills && unzip -o dist/kein-ki-sprech.zip -d ~/.claude/skills/
 ```
@@ -86,9 +114,9 @@ Umgangssprachliche Formulierungen wie die Beispiele oben funktionieren auch hier
 
 ## Claude Projects und API
 
-**Claude Projects** – `SKILL.md` und `references/beispiele.md` in das Projektwissen hochladen.
+**Claude Projects** – die beiden Dateien aus `skills/kein-ki-sprech/` in das Projektwissen hochladen: `SKILL.md` und `references/beispiele.md`.
 
-**API oder eigene Anwendung** – den Inhalt von `SKILL.md` in den System-Prompt übernehmen. `references/beispiele.md` nur bei Bedarf nachladen.
+**API oder eigene Anwendung** – den Inhalt von `skills/kein-ki-sprech/SKILL.md` in den System-Prompt übernehmen. `references/beispiele.md` nur bei Bedarf nachladen.
 
 ## Was er findet
 
@@ -119,7 +147,7 @@ Der Modus ergibt sich aus der Anfrage. „Nur prüfen, nicht umschreiben“ scha
 
 Zwei Stellen lohnen sich, bevor der Skill im eigenen Haus verteilt wird:
 
-1. **Die Wortliste** in `SKILL.md` um die Lieblingsfloskeln des eigenen Hauses ergänzen. Jede Marketingabteilung hat welche.
+1. **Die Wortliste** in `skills/kein-ki-sprech/SKILL.md` um die Lieblingsfloskeln des eigenen Hauses ergänzen. Jede Marketingabteilung hat welche.
 2. **Anrede** – der Skill duzt in seinen eigenen Kommentaren und wechselt ins Sie, wenn er gesiezt wird. Wer das anders will, ändert es im Abschnitt *Ablauf*.
 
 Nach jeder Änderung `./scripts/build.sh` erneut laufen lassen und das ZIP neu hochladen oder entpacken.
@@ -128,9 +156,11 @@ Nach jeder Änderung `./scripts/build.sh` erneut laufen lassen und das ZIP neu h
 
 ```
 kein-ki-sprech/
-├── SKILL.md                  # Regeln und Ablauf
-├── references/
-│   └── beispiele.md          # Vorher/Nachher-Paare
+├── skills/
+│   └── kein-ki-sprech/       # das, was installiert wird
+│       ├── SKILL.md          # Regeln und Ablauf
+│       └── references/
+│           └── beispiele.md  # Vorher/Nachher-Paare
 ├── assets/
 │   ├── icon.svg              # Quelle für das Icon
 │   ├── icon-512.png          # Icon, 512 px
@@ -141,6 +171,8 @@ kein-ki-sprech/
     ├── build.sh              # baut dist/kein-ki-sprech.zip (und .skill)
     └── build-assets.sh       # rendert die PNGs aus assets/
 ```
+
+Alles unterhalb von `skills/kein-ki-sprech/` landet beim Installieren im Agenten, alles daneben ist Projektbeiwerk und bleibt hier. Deshalb liegt der Skill in einem Unterordner und nicht im Wurzelverzeichnis: `npx skills add` kopiert sonst README, Changelog und Bilddateien mit in das Skill-Verzeichnis.
 
 `dist/` ist nicht eingecheckt. `kein-ki-sprech.skill` ist eine identische Kopie des ZIP unter anderem Namen und liegt als Release-Artefakt bei; für den Upload in Cowork oder claude.ai die `.zip`-Variante nehmen.
 

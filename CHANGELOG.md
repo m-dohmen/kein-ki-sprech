@@ -1,5 +1,22 @@
 # Changelog
 
+## v1.2.0 – 2026-09-12
+
+Installation über die skills-CLI, keine Änderung an den Redigierregeln.
+
+- Installation mit einem Befehl: `npx skills add m-dohmen/kein-ki-sprech`
+  bedient Claude Code, Codex, Cursor, Windsurf, Gemini, Zed und weitere Agenten.
+  Der ZIP-Weg bleibt für Claude Cowork, claude.ai und Projects, die keine CLI kennen.
+- Skill nach `skills/kein-ki-sprech/` verschoben. Bisher lag `SKILL.md` im
+  Wurzelverzeichnis, wodurch die CLI das komplette Repository in das
+  Skill-Verzeichnis des Agenten kopierte – README, Changelog, Issue-Vorlagen
+  und rund ein Megabyte Bilddateien inklusive. Installiert werden jetzt nur
+  noch `SKILL.md` und `references/beispiele.md`.
+- README mit Schnellstart auf CLI-Basis, eigenem Abschnitt *Installation per
+  CLI* und aktualisierter Umgebungstabelle.
+- Pfade in `scripts/build.sh`, `CONTRIBUTING.md` und der Pull-Request-Vorlage
+  nachgezogen.
+
 ## v1.1.0 – 2026-08-17
 
 Ergebnis eines Multi-Agenten-Audits (6 Prüf-Perspektiven, 3 Richter-Linsen,
